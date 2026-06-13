@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Install — Frontier</title><meta name="description" content="Run Frontier with Docker, Docker Compose, or Kubernetes: release channels, a quick demo, persistent volumes, optional GPU acceleration, worker machines, and agent authentication."><link rel="canonical" href="https://frontierengineer.com/install/"><meta name="theme-color" content="#08090a"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:type" content="website"><meta property="og:title" content="Install — Frontier"><meta property="og:description" content="Run Frontier with Docker, Docker Compose, or Kubernetes: release channels, a quick demo, persistent volumes, optional GPU acceleration, worker machines, and agent authentication."><meta property="og:url" content="https://frontierengineer.com/install/"><meta property="og:image" content="/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Install — Frontier"><meta name="twitter:description" content="Run Frontier with Docker, Docker Compose, or Kubernetes: release channels, a quick demo, persistent volumes, optional GPU acceleration, worker machines, and agent authentication."><meta name="twitter:image" content="/og.png"><link rel="preconnect" href="https://api.fontshare.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/assistant.Bw5Z6QPS.css">
+<link rel="stylesheet" href="/_astro/install.BlqC9Uhc.css"></head> <body> <header class="nav" data-astro-cid-dmqpwcec> <div class="container nav-inner" data-astro-cid-dmqpwcec> <a class="brand" href="/" aria-label="Frontier home" data-astro-cid-dmqpwcec> <svg class="brand-mark" width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true" data-astro-cid-dmqpwcec> <defs data-astro-cid-dmqpwcec> <linearGradient id="navg" x1="24" y1="52" x2="42" y2="10" gradientUnits="userSpaceOnUse" data-astro-cid-dmqpwcec> <stop stop-color="#6457e6" data-astro-cid-dmqpwcec></stop> <stop offset="1" stop-color="#b3a8ff" data-astro-cid-dmqpwcec></stop> </linearGradient> </defs> <rect width="64" height="64" rx="15" fill="#0e1014" data-astro-cid-dmqpwcec></rect> <rect x="0.6" y="0.6" width="62.8" height="62.8" rx="14.4" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" data-astro-cid-dmqpwcec></rect> <g transform="rotate(14 32 32)" data-astro-cid-dmqpwcec> <polygon points="32,9 38.5,32 25.5,32" fill="url(#navg)" data-astro-cid-dmqpwcec></polygon> <polygon points="32,55 38.5,32 25.5,32" fill="#565c6b" data-astro-cid-dmqpwcec></polygon> <circle cx="32" cy="32" r="4.2" fill="#0e1014" data-astro-cid-dmqpwcec></circle> <circle cx="32" cy="32" r="4.2" fill="none" stroke="#b3a8ff" stroke-width="1.5" data-astro-cid-dmqpwcec></circle> </g> </svg> <span class="brand-word" data-astro-cid-dmqpwcec>Frontier</span> </a> <nav class="nav-links" aria-label="Primary" data-astro-cid-dmqpwcec> <a href="/#problem" data-astro-cid-dmqpwcec>The problem</a><a href="/#extensions" data-astro-cid-dmqpwcec>The toolkit</a><a href="/#adapt" data-astro-cid-dmqpwcec>Build &amp; adapt</a><a href="/#versus" data-astro-cid-dmqpwcec>Why Frontier</a><a href="/#faq" data-astro-cid-dmqpwcec>FAQ</a><a href="/careers" data-astro-cid-dmqpwcec>Careers</a> </nav> <a class="btn btn-primary nav-cta" href="/install" data-astro-cid-dmqpwcec>Install Frontier</a> </div> </header>  <main>  <div class="container in-layout" data-astro-cid-i5k7quhp> <nav class="in-nav" aria-label="On this page" data-astro-cid-i5k7quhp> <span class="in-nav-label" data-astro-cid-i5k7quhp>On this page</span> <ol class="in-nav-list" data-astro-cid-i5k7quhp> <li data-astro-cid-i5k7quhp><a href="#prerequisites" data-nav="prerequisites" data-astro-cid-i5k7quhp><span class="in-nav-num" data-astro-cid-i5k7quhp>01</span>Prerequisites</a></li> <li data-astro-cid-i5k7quhp><a href="#channel" data-nav="channel" data-astro-cid-i5k7quhp><span class="in-nav-num" data-astro-cid-i5k7quhp>02</span>Pick a channel</a></li> <li data-astro-cid-i5k7quhp><a href="#demo" data-nav="demo" data-astro-cid-i5k7quhp><span class="in-nav-num" data-astro-cid-i5k7quhp>03</span>Run a quick demo</a></li> <li data-astro-cid-i5k7quhp><a href="#run" data-nav="run" data-astro-cid-i5k7quhp><span class="in-nav-num" data-astro-cid-i5k7quhp>04</span>Run it for real</a></li> <li data-astro-cid-i5k7quhp><a href="#machines" data-nav="machines" data-astro-cid-i5k7quhp><span class="in-nav-num" data-astro-cid-i5k7quhp>05</span>Connect a machine</a></li> <li data-astro-cid-i5k7quhp><a href="#authenticate" data-nav="authenticate" data-astro-cid-i5k7quhp><span class="in-nav-num" data-astro-cid-i5k7quhp>06</span>Authenticate the agent</a></li> </ol> </nav> <div class="in-main" data-astro-cid-i5k7quhp> <section class="in-hero" data-astro-cid-i5k7quhp> <span class="eyebrow" data-astro-cid-i5k7quhp>Install</span> <h1 class="in-title" data-astro-cid-i5k7quhp>Install Frontier</h1> <p class="in-lead" data-astro-cid-i5k7quhp>
+Docker is the only dependency — the server, its worker, and the voice engines ship in
+          one image. An NVIDIA GPU improves voice transcription; everything runs on CPU without one.
+</p> </section> <section class="in-section" id="prerequisites" data-astro-cid-i5k7quhp> <div class="in-body" data-astro-cid-i5k7quhp> <h2 data-astro-cid-i5k7quhp><span class="in-num" data-astro-cid-i5k7quhp>01</span>Prerequisites</h2> <p data-astro-cid-i5k7quhp>Docker, on the machine that will run the server.</p> <div class="in-pick in-pick-3" role="group" aria-label="Operating system" data-astro-cid-i5k7quhp> <button type="button" class="in-pick-card is-selected" data-os="linux" aria-pressed="true" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Linux</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>Docker Engine via the convenience script</span> </button> <button type="button" class="in-pick-card" data-os="macos" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>macOS</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>Docker Desktop</span> </button> <button type="button" class="in-pick-card" data-os="windows" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Windows</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>Docker Desktop on WSL 2</span> </button> </div> <div data-os-panel="linux" data-astro-cid-i5k7quhp> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>curl -fsSL https://get.docker.com | sh</code></pre> <p class="in-note" data-astro-cid-i5k7quhp>
+Or use your distribution's packages — see the
+<a href="https://docs.docker.com/engine/install/" data-astro-cid-i5k7quhp>Docker Engine install docs</a>.
+</p> </div> <div data-os-panel="macos" hidden data-astro-cid-i5k7quhp> <p class="in-panel-p" data-astro-cid-i5k7quhp>
+Install <a href="https://docs.docker.com/desktop/setup/install/mac-install/" data-astro-cid-i5k7quhp>Docker
+          Desktop for Mac</a> and launch it once.
+</p> </div> <div data-os-panel="windows" hidden data-astro-cid-i5k7quhp> <p class="in-panel-p" data-astro-cid-i5k7quhp>
+Install <a href="https://docs.docker.com/desktop/setup/install/windows-install/" data-astro-cid-i5k7quhp>Docker
+          Desktop for Windows</a> and launch it once.
+</p> <p class="in-note" data-astro-cid-i5k7quhp>Docker Desktop runs containers in WSL 2; its installer sets that up.</p> </div> </div> </section> <section class="in-section" id="channel" data-astro-cid-i5k7quhp> <div class="in-body" data-astro-cid-i5k7quhp> <h2 data-astro-cid-i5k7quhp><span class="in-num" data-astro-cid-i5k7quhp>02</span>Pick a channel</h2> <div class="in-pick in-pick-3" role="group" aria-label="Release channel" data-astro-cid-i5k7quhp> <button type="button" class="in-pick-card in-channel" data-channel="nightly" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-channel-head" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Nightly</span> <code class="in-channel-tag" data-astro-cid-i5k7quhp>nightly</code> </span> <span class="in-channel-cadence" data-astro-cid-i5k7quhp>daily</span> <span class="in-channel-body" data-astro-cid-i5k7quhp>The newest build, cut daily. Expect rough edges.</span> </button><button type="button" class="in-pick-card in-channel" data-channel="rc" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-channel-head" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Trailblazer</span> <code class="in-channel-tag" data-astro-cid-i5k7quhp>rc</code> </span> <span class="in-channel-cadence" data-astro-cid-i5k7quhp>~2 weeks before stable</span> <span class="in-channel-body" data-astro-cid-i5k7quhp>Pre-release. Features land here about two weeks before stable, mostly settled.</span> </button><button type="button" class="in-pick-card in-channel is-selected" data-channel="stable" aria-pressed="true" data-astro-cid-i5k7quhp> <span class="in-channel-head" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Stable</span> <code class="in-channel-tag" data-astro-cid-i5k7quhp>stable</code> </span> <span class="in-channel-cadence" data-astro-cid-i5k7quhp>monthly</span> <span class="in-channel-body" data-astro-cid-i5k7quhp>Monthly releases. The default.</span> </button> </div> <p class="in-note" data-astro-cid-i5k7quhp>
+The selected channel sets the image tag in every command below. A running install polls
+        its channel's manifest daily and shows an in-app notice when a new build is published.
+</p> </div> </section> <section class="in-section" id="demo" data-astro-cid-i5k7quhp> <div class="in-body" data-astro-cid-i5k7quhp> <h2 data-astro-cid-i5k7quhp><span class="in-num" data-astro-cid-i5k7quhp>03</span>Run a quick demo</h2> <p data-astro-cid-i5k7quhp>One command, no volumes, nothing to clean up:</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>docker run --rm -p 61815:80 ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span></code></pre> <p data-astro-cid-i5k7quhp>
+Open <code class="in-inline" data-astro-cid-i5k7quhp>http://localhost:61815</code>. With no volume mounted the
+        container boots in demo mode, seeded with sample data. Nothing persists once the
+        container is removed.
+</p> </div> </section> <section class="in-section" id="run" data-astro-cid-i5k7quhp> <div class="in-body" data-astro-cid-i5k7quhp> <h2 data-astro-cid-i5k7quhp><span class="in-num" data-astro-cid-i5k7quhp>04</span>Run it for real</h2> <p data-astro-cid-i5k7quhp>One image, three ways to run it — pick yours. Docker is the recommended install.</p> <div class="in-pick in-pick-3" role="group" aria-label="Container runner" data-astro-cid-i5k7quhp> <button type="button" class="in-pick-card is-selected" data-runner="docker" aria-pressed="true" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Docker</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>Single container, simplest</span> </button> <button type="button" class="in-pick-card" data-runner="compose" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Docker Compose</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>One file, easy to edit</span> </button> <button type="button" class="in-pick-card" data-runner="kubernetes" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Kubernetes</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>For a cluster</span> </button> </div> <div data-runner-panel="docker" data-astro-cid-i5k7quhp> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Install</h3> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>docker run -d --name frontier \
+  --restart unless-stopped \
+  -p 61815:80 \
+  -e FRONTIER_DIR=/data/frontier \
+  -e FRONTIER_CHANNEL=<span data-tag data-astro-cid-i5k7quhp>stable</span> \
+  -v /path/to/frontier-data:/data/frontier \
+  -v /path/to/frontier-home:/root \
+  -v ~/repos:/workspace/repos \
+  -v ~/notes:/workspace/notes \
+  ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span></code></pre> <ul class="in-list" data-astro-cid-i5k7quhp> <li data-astro-cid-i5k7quhp>
+Replace <code class="in-inline" data-astro-cid-i5k7quhp>/path/to/frontier-data</code> with the directory
+              where you want all of Frontier's data to live. Back that directory up and you've
+              backed up Frontier.
+</li> <li data-astro-cid-i5k7quhp>
+Replace <code class="in-inline" data-astro-cid-i5k7quhp>/path/to/frontier-home</code> with a directory for
+              the container's home — keeping it means logins and caches survive recreations.
+</li> <li data-astro-cid-i5k7quhp> <code class="in-inline" data-astro-cid-i5k7quhp>~/repos</code> and <code class="in-inline" data-astro-cid-i5k7quhp>~/notes</code>
+make your local directories available to work on in Frontier. Mount as many as you
+              like — each shows up as a place to create workspaces.
+</li> </ul> <p data-astro-cid-i5k7quhp>
+Open <code class="in-inline" data-astro-cid-i5k7quhp>http://localhost:61815</code>, then
+<a href="#authenticate" data-astro-cid-i5k7quhp>authenticate the agent</a> before the first turn.
+</p> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Adding GPU capability</h3> <p data-astro-cid-i5k7quhp>
+Parts of Frontier — voice and transcription — work best with a GPU. Without one they
+            degrade gracefully and everything runs; a GPU is optional. Acceleration is NVIDIA
+            (CUDA) only today.
+</p> <p data-astro-cid-i5k7quhp>
+With an NVIDIA GPU and the
+<a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html" data-astro-cid-i5k7quhp>NVIDIA Container Toolkit</a>
+installed, add <code class="in-inline" data-astro-cid-i5k7quhp>--gpus all</code> — the same command, one new
+            line:
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp><span class="in-dim" data-astro-cid-i5k7quhp>docker run -d --name frontier \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  --restart unless-stopped \</span>
+  --gpus all \
+<span class="in-dim" data-astro-cid-i5k7quhp>  -p 61815:80 \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  -e FRONTIER_DIR=/data/frontier \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  -e FRONTIER_CHANNEL=<span data-tag data-astro-cid-i5k7quhp>stable</span> \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  -v /path/to/frontier-data:/data/frontier \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  -v /path/to/frontier-home:/root \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  -v ~/repos:/workspace/repos \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  -v ~/notes:/workspace/notes \</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span></span></code></pre> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Updating</h3> <p data-astro-cid-i5k7quhp>
+Pull the new build and recreate the container. Your data, home, and work directories
+            are mounts — recreating the container loses nothing.
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>docker pull ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span>
+docker rm -f frontier
+# run the same docker run command from Install</code></pre> </div> </div> <div data-runner-panel="compose" hidden data-astro-cid-i5k7quhp> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Install</h3> <p data-astro-cid-i5k7quhp>The same container, declared in a <code class="in-inline" data-astro-cid-i5k7quhp>docker-compose.yml</code>:</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>services:
+  frontier:
+    image: ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span>
+    container_name: frontier
+    restart: unless-stopped
+    ports:
+      - "61815:80"
+    environment:
+      FRONTIER_DIR: /data/frontier
+      FRONTIER_CHANNEL: <span data-tag data-astro-cid-i5k7quhp>stable</span>
+    volumes:
+      - /path/to/frontier-data:/data/frontier
+      - /path/to/frontier-home:/root
+      - ~/repos:/workspace/repos
+      - ~/notes:/workspace/notes</code></pre> <ul class="in-list" data-astro-cid-i5k7quhp> <li data-astro-cid-i5k7quhp>
+Replace <code class="in-inline" data-astro-cid-i5k7quhp>/path/to/frontier-data</code> with the directory
+              where you want all of Frontier's data to live. Back that directory up and you've
+              backed up Frontier.
+</li> <li data-astro-cid-i5k7quhp>
+Replace <code class="in-inline" data-astro-cid-i5k7quhp>/path/to/frontier-home</code> with a directory for
+              the container's home — keeping it means logins and caches survive recreations.
+</li> <li data-astro-cid-i5k7quhp> <code class="in-inline" data-astro-cid-i5k7quhp>~/repos</code> and <code class="in-inline" data-astro-cid-i5k7quhp>~/notes</code>
+make your local directories available to work on in Frontier. Mount as many as you
+              like — each shows up as a place to create workspaces.
+</li> </ul> <p class="in-note" data-astro-cid-i5k7quhp>
+A ready-to-edit copy is published at
+<a href="https://frontierengineer.github.io/releases/install/docker-compose.yml" data-astro-cid-i5k7quhp>releases/install/docker-compose.yml</a>.
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>docker compose up -d</code></pre> <p data-astro-cid-i5k7quhp>
+Open <code class="in-inline" data-astro-cid-i5k7quhp>http://localhost:61815</code>, then
+<a href="#authenticate" data-astro-cid-i5k7quhp>authenticate the agent</a> before the first turn.
+</p> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Adding GPU capability</h3> <p data-astro-cid-i5k7quhp>
+Parts of Frontier — voice and transcription — work best with a GPU. Without one they
+            degrade gracefully and everything runs; a GPU is optional. Acceleration is NVIDIA
+            (CUDA) only today.
+</p> <p data-astro-cid-i5k7quhp>
+With an NVIDIA GPU and the
+<a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html" data-astro-cid-i5k7quhp>NVIDIA Container Toolkit</a>
+installed, add <code class="in-inline" data-astro-cid-i5k7quhp>gpus: all</code> to the service — the same
+            file, one new line:
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp><span class="in-dim" data-astro-cid-i5k7quhp>services:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>  frontier:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>    image: ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span></span>
+<span class="in-dim" data-astro-cid-i5k7quhp>    container_name: frontier</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>    restart: unless-stopped</span>
+    gpus: all
+<span class="in-dim" data-astro-cid-i5k7quhp>    ports:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      - "61815:80"</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>    environment:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      FRONTIER_DIR: /data/frontier</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      FRONTIER_CHANNEL: <span data-tag data-astro-cid-i5k7quhp>stable</span></span>
+<span class="in-dim" data-astro-cid-i5k7quhp>    volumes:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      - /path/to/frontier-data:/data/frontier</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      - /path/to/frontier-home:/root</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      - ~/repos:/workspace/repos</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>      - ~/notes:/workspace/notes</span></code></pre> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Updating</h3> <p data-astro-cid-i5k7quhp>Pull the new build and recreate in one step — the mounts make it lossless:</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>docker compose pull &amp;&amp; docker compose up -d</code></pre> </div> </div> <div data-runner-panel="kubernetes" hidden data-astro-cid-i5k7quhp> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Install</h3> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>kubectl apply -f https://frontierengineer.github.io/releases/install/kubernetes.yaml
+kubectl port-forward -n frontier svc/frontier 61815:80</code></pre> <p data-astro-cid-i5k7quhp>
+The published manifest is a namespace, two PVCs, a Deployment, and a Service — a
+            starting point to adapt (storage class, ingress), not a prescription. It pins
+<code class="in-inline" data-astro-cid-i5k7quhp>stable</code>; for another channel, change the image tag and
+<code class="in-inline" data-astro-cid-i5k7quhp>FRONTIER_CHANNEL</code> together. The core of it:
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: frontier-data
+  namespace: frontier
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 10Gi
+# frontier-root: a second PVC, same shape, 5Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontier
+  namespace: frontier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontier
+  template:
+    metadata:
+      labels:
+        app: frontier
+    spec:
+      containers:
+        - name: frontier
+          image: ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span>
+          ports:
+            - containerPort: 80
+            - containerPort: 27520 # worker port
+          env:
+            - name: FRONTIER_DIR
+              value: /data/frontier
+            - name: FRONTIER_CHANNEL
+              value: <span data-tag data-astro-cid-i5k7quhp>stable</span>
+          volumeMounts:
+            - name: data
+              mountPath: /data/frontier
+            - name: root
+              mountPath: /root
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: frontier-data
+        - name: root
+          persistentVolumeClaim:
+            claimName: frontier-root
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontier
+  namespace: frontier
+spec:
+  selector:
+    app: frontier
+  ports:
+    - port: 80
+      targetPort: 80
+      name: http
+    - port: 27520
+      targetPort: 27520
+      name: worker</code></pre> <ul class="in-list" data-astro-cid-i5k7quhp> <li data-astro-cid-i5k7quhp> <code class="in-inline" data-astro-cid-i5k7quhp>frontier-data</code> holds all of Frontier's data. Back
+              that claim up and you've backed up Frontier.
+</li> <li data-astro-cid-i5k7quhp> <code class="in-inline" data-astro-cid-i5k7quhp>frontier-root</code> is the container's home — keeping it
+              means logins and caches survive pod recreations.
+</li> <li data-astro-cid-i5k7quhp>
+Mount the directories you want to work on into the pod under
+<code class="in-inline" data-astro-cid-i5k7quhp>/workspace/&lt;name&gt;</code> — as many as you like; each
+              shows up as a place to create workspaces.
+</li> </ul> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Adding GPU capability</h3> <p data-astro-cid-i5k7quhp>
+Parts of Frontier — voice and transcription — work best with a GPU. Without one they
+            degrade gracefully and everything runs; a GPU is optional. Acceleration is NVIDIA
+            (CUDA) only today.
+</p> <p data-astro-cid-i5k7quhp>
+On a cluster with the
+<a href="https://github.com/NVIDIA/k8s-device-plugin" data-astro-cid-i5k7quhp>NVIDIA device plugin</a>,
+            request a GPU on the container — the same Deployment, one new block:
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp><span class="in-dim" data-astro-cid-i5k7quhp>      containers:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>        - name: frontier</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>          image: ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span></span>
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+<span class="in-dim" data-astro-cid-i5k7quhp>          ports:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>            - containerPort: 80</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>            - containerPort: 27520 # worker port</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>          env:</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>            - name: FRONTIER_DIR</span>
+<span class="in-dim" data-astro-cid-i5k7quhp>              value: /data/frontier</span></code></pre> <p class="in-note" data-astro-cid-i5k7quhp>
+A GPU is exclusive to its container. On a single-GPU node, set the Deployment's
+            update strategy to <code class="in-inline" data-astro-cid-i5k7quhp>Recreate</code> so a rolling update
+            doesn't sit waiting for a second GPU.
+</p> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Updating</h3> <p data-astro-cid-i5k7quhp>
+Each channel publishes a manifest with the exact image of its current build,
+<code class="in-inline" data-astro-cid-i5k7quhp>https://frontierengineer.github.io/releases/channels/<span data-tag data-astro-cid-i5k7quhp>stable</span>.json</code>.
+            Roll the Deployment to it:
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>kubectl set image -n frontier deployment/frontier \
+  frontier="$(curl -s https://frontierengineer.github.io/releases/channels/<span data-tag data-astro-cid-i5k7quhp>stable</span>.json | jq -r .image)"</code></pre> <p class="in-note" data-astro-cid-i5k7quhp>
+Or wire that manifest into your own rollout machinery — Flux, Argo, a CronJob.
+</p> </div> <div class="in-path" data-astro-cid-i5k7quhp> <h3 data-astro-cid-i5k7quhp>Workers in-cluster</h3> <p data-astro-cid-i5k7quhp>
+In-cluster fleet workers skip pairing — on a trusted network they identify by a fixed
+            uuid you set, no code in the manifest. Add a second Deployment from the same image with
+            the daemon as its command:
+</p> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp># in a second Deployment's pod spec
+containers:
+  - name: frontier-worker
+    image: ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span>
+    command: ["node", "/server/machine/daemon.js"]
+    env:
+      - name: FRONTIER_MACHINE_UUID
+        value: &lt;any-uuid&gt; # the machine's stable identity; name it later in the UI
+      - name: FRONTIER_SERVER_HOST
+        value: frontier.frontier.svc.cluster.local</code></pre> <p class="in-note" data-astro-cid-i5k7quhp>
+Give the worker a <code class="in-inline" data-astro-cid-i5k7quhp>/root</code> volume — the agent credential
+            lives there. Share the server's volume if your storage class allows it, or mount its
+            own and authenticate in that pod.
+</p> </div> </div> </div> </section> <section class="in-section" id="machines" data-astro-cid-i5k7quhp> <div class="in-body" data-astro-cid-i5k7quhp> <h2 data-astro-cid-i5k7quhp><span class="in-num" data-astro-cid-i5k7quhp>05</span>Connect a machine</h2> <p data-astro-cid-i5k7quhp>
+The server executes turns with a local worker out of the box. Each additional machine — a
+        laptop, a desktop with a GPU, another server — runs the same daemon and joins with a
+        short-lived code. The worker only ever dials out: no SSH, no inbound ports, no addresses to
+        configure. Link resolves connectivity for you — it connects directly when there's a path
+        and relays when there isn't, so the machine can sit on the same network or anywhere on the
+        internet, end-to-end encrypted either way.
+</p> <ol class="in-steps" data-astro-cid-i5k7quhp> <li data-astro-cid-i5k7quhp>
+Open <strong data-astro-cid-i5k7quhp>Sessions → Machines</strong> in the left nav and click
+<strong data-astro-cid-i5k7quhp>+ Connect a machine</strong>. It shows a pairing code.
+</li> <li data-astro-cid-i5k7quhp>
+On the other machine, run one of the two below with that code — it's all the worker needs
+          to find your server. Copy the real command from the dialog; it carries the live code.
+<div class="in-pick in-pick-2" role="group" aria-label="Worker install" data-astro-cid-i5k7quhp> <button type="button" class="in-pick-card is-selected" data-worker="docker" aria-pressed="true" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Docker</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>A spare box, NAS, or VPS — survives reboots on its own</span> </button> <button type="button" class="in-pick-card" data-worker="node" aria-pressed="false" data-astro-cid-i5k7quhp> <span class="in-pick-name" data-astro-cid-i5k7quhp>Node</span> <span class="in-pick-desc" data-astro-cid-i5k7quhp>A laptop or bare-metal machine — needs Node 18+</span> </button> </div> <div data-worker-panel="docker" data-astro-cid-i5k7quhp> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>docker run -d --name frontier-worker --restart unless-stopped -v frontier-worker:/root \
+  ghcr.io/frontierengineer/frontier:<span data-tag data-astro-cid-i5k7quhp>stable</span> connect <span class="in-dim" data-astro-cid-i5k7quhp>CODE</span></code></pre> </div> <div data-worker-panel="node" hidden data-astro-cid-i5k7quhp> <pre class="in-code" data-astro-cid-i5k7quhp><code data-astro-cid-i5k7quhp>curl -fsSL https://frontierengineer.com/connect.sh | sh -s -- <span class="in-dim" data-astro-cid-i5k7quhp>CODE</span></code></pre> <p class="in-note" data-astro-cid-i5k7quhp>
+Identity lands under <code class="in-inline" data-astro-cid-i5k7quhp>~/.frontier-worker/</code>.
+</p> </div> </li> <li data-astro-cid-i5k7quhp>
+Watch it land. The machine appears in the fleet table named after its hostname the moment
+          it pairs, with a quiet <code class="in-inline" data-astro-cid-i5k7quhp>direct</code> or
+<code class="in-inline" data-astro-cid-i5k7quhp>via relay</code> tag on how it reached you. The code is single-use
+          and burns on first contact; you never type it again. A reboot or a flaky network just
+          shows the machine going offline and coming back on its own.
+</li> </ol> </div> </section> <section class="in-section in-end" id="authenticate" data-astro-cid-i5k7quhp> <div class="in-body" data-astro-cid-i5k7quhp> <h2 data-astro-cid-i5k7quhp><span class="in-num" data-astro-cid-i5k7quhp>06</span>Authenticate the agent</h2> <p data-astro-cid-i5k7quhp>
+Each machine runs an agent runtime to execute its turns — Claude Code and OpenCode are
+        built in, and an extension can add others. You authenticate it the way that tool normally
+        logs in; Frontier never sees or stores your credentials. Do it once per machine — the
+        login is saved in that machine's home, so it carries across restarts and updates.
+</p> <p class="in-note" data-astro-cid-i5k7quhp>
+A machine you already use your agent on is already logged in — nothing to do. A fresh
+        container worker is isolated, so log in inside it once: open a shell
+        (<code class="in-inline" data-astro-cid-i5k7quhp>docker exec -it frontier-worker bash</code>) and run your runtime's
+        normal login there.
+</p> </div> </section> </div> </div>  </main> <footer class="footer" data-astro-cid-sz7xmlte> <div class="container footer-inner" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a class="footer-logo" href="/" aria-label="Frontier home" data-astro-cid-sz7xmlte> <svg class="footer-mark" width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true" data-astro-cid-sz7xmlte> <defs data-astro-cid-sz7xmlte> <linearGradient id="footg" x1="24" y1="52" x2="42" y2="10" gradientUnits="userSpaceOnUse" data-astro-cid-sz7xmlte> <stop stop-color="#6457e6" data-astro-cid-sz7xmlte></stop> <stop offset="1" stop-color="#b3a8ff" data-astro-cid-sz7xmlte></stop> </linearGradient> </defs> <rect width="64" height="64" rx="15" fill="#0e1014" data-astro-cid-sz7xmlte></rect> <rect x="0.6" y="0.6" width="62.8" height="62.8" rx="14.4" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" data-astro-cid-sz7xmlte></rect> <g transform="rotate(14 32 32)" data-astro-cid-sz7xmlte> <polygon points="32,9 38.5,32 25.5,32" fill="url(#footg)" data-astro-cid-sz7xmlte></polygon> <polygon points="32,55 38.5,32 25.5,32" fill="#565c6b" data-astro-cid-sz7xmlte></polygon> <circle cx="32" cy="32" r="4.2" fill="#0e1014" data-astro-cid-sz7xmlte></circle> <circle cx="32" cy="32" r="4.2" fill="none" stroke="#b3a8ff" stroke-width="1.5" data-astro-cid-sz7xmlte></circle> </g> </svg> <span class="brand-word" data-astro-cid-sz7xmlte>Frontier</span> </a> <p data-astro-cid-sz7xmlte>Operational infrastructure for frontier engineers. Free to run, yours to reshape.</p> </div> <nav class="footer-cols" aria-label="Footer" data-astro-cid-sz7xmlte> <div data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>Product</h4> <a href="/spaces" data-astro-cid-sz7xmlte>Spaces</a> <a href="/#extensions" data-astro-cid-sz7xmlte>The toolkit</a> <a href="/#adapt" data-astro-cid-sz7xmlte>Build &amp; adapt</a> <a href="/#versus" data-astro-cid-sz7xmlte>Why Frontier</a> </div> <div data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>More</h4> <a href="/#problem" data-astro-cid-sz7xmlte>The problem</a> <a href="/#promise" data-astro-cid-sz7xmlte>Pricing</a> <a href="/careers" data-astro-cid-sz7xmlte>Careers</a> <a href="/#faq" data-astro-cid-sz7xmlte>FAQ</a> <a href="/install" data-astro-cid-sz7xmlte>Install Frontier</a> </div> </nav> </div> <div class="container footer-base" data-astro-cid-sz7xmlte> <span data-astro-cid-sz7xmlte>© 2026 Frontier</span> <span class="footer-made" data-astro-cid-sz7xmlte>Made with <span class="footer-emoji" aria-hidden="true" data-astro-cid-sz7xmlte>🍄</span> in the Santa Cruz Mountains</span> </div> </footer> <script type="module">const s=["🌲","🦭","⛰️","🐈","🌊","🍄","🐬","🥃"],t=document.querySelector(".footer-emoji"),n=window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(t&&!n){let e=[];setInterval(()=>{e.length===0&&(e=[...s].sort(()=>Math.random()-.5),e[0]===t.textContent&&e.push(e.shift())),t.classList.add("is-fading"),setTimeout(()=>{t.textContent=e.shift(),t.classList.remove("is-fading")},900)},5e3)}</script>  </body></html> <script type="module">const m=Array.from(document.querySelectorAll("[data-tag]")),d=Array.from(document.querySelectorAll("[data-channel]"));d.forEach(t=>{t.addEventListener("click",()=>{const s=t.dataset.channel||"stable";d.forEach(e=>{const r=e===t;e.classList.toggle("is-selected",r),e.setAttribute("aria-pressed",String(r))}),m.forEach(e=>{e.textContent=s})})});function i(t,s){const e=Array.from(document.querySelectorAll(`[${t}]`)),r=Array.from(document.querySelectorAll(`[${s}]`)),a=n=>{e.forEach(o=>{const l=o.getAttribute(t)===n;o.classList.toggle("is-selected",l),o.setAttribute("aria-pressed",String(l))}),r.forEach(o=>{o.hidden=o.getAttribute(s)!==n})};return e.forEach(n=>n.addEventListener("click",()=>a(n.getAttribute(t)||""))),a}const f=i("data-os","data-os-panel");i("data-runner","data-runner-panel");i("data-worker","data-worker-panel");const g=navigator.userAgentData?.platform||navigator.platform||"";/mac/i.test(g)?f("macos"):/win/i.test(g)&&f("windows");const u=new Map(Array.from(document.querySelectorAll("[data-nav]")).map(t=>[t.dataset.nav,t])),c=Array.from(document.querySelectorAll(".in-section[id]"));if(u.size&&c.length&&"IntersectionObserver"in window){const t=new Set,s=()=>{const r=c.find(a=>t.has(a.id))?.id;u.forEach((a,n)=>a.classList.toggle("is-active",n===r))},e=new IntersectionObserver(r=>{r.forEach(a=>{a.isIntersecting?t.add(a.target.id):t.delete(a.target.id)}),s()},{rootMargin:"-80px 0px -65% 0px",threshold:0});c.forEach(r=>e.observe(r))}</script> 
